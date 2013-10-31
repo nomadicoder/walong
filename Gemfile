@@ -43,3 +43,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Hydra Gems
+gem 'hydra', '~> 6.0.0', :require => 'hydra6'
