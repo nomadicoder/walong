@@ -46,3 +46,11 @@ end
 
 # Hydra Gems
 gem 'hydra', '~> 6.0.0', :require => 'hydra6'
+
+gem "devise", "3.0.0.rc"
+gem "devise-guests", "~> 0.3"
+gem "bootstrap-sass"
+group :development, :test do
+  gem "rspec-rails"
+  gem "jettywrapper"
+end
