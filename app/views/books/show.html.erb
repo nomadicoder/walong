@@ -6,8 +6,11 @@
 </p>
 
 <p>
-  <strong>Creator:</strong>
-  <%= @book.creator %>
+  <ul>
+    <%- @book.creator.each do |author|%>
+      <li><%= author %></li>
+    <%- end %>
+  </ul>
 </p>
 
 <p>

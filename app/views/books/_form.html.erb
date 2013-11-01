@@ -16,8 +16,17 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :creator %><br>
-    <%= f.text_field :creator %>
+    <%= f.label :creator, "Authors" %><br>
+    <% @book.creator.each do |creator| %>
+      <div class="field">
+        <%= text_field_tag "book[creator][]", creator %>
+      </div>
+    <% end %> 
+    <%- if @book.creator.empty? %>
+      <div class="field">
+        <%= text_field_tag "book[creator][]", nil %>
+      </div>
+    <%- end %>
   </div>
   <div class="field">
     <%= f.label :publisher %><br>
