@@ -28,5 +28,10 @@
   <%= @book.abstract %>
 </p>
 
+<p>
+  <strong>File Datastream:</strong>
+  <%= link_to @book.mediaContent.content.args[:url], @book.mediaContent.content.args[:url] %>
+</p>
+
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
