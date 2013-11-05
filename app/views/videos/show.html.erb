@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @video.title %>
+</p>
+
+<p>
+  <strong>Creator:</strong>
+  <%= @video.creator %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @video.description %>
+</p>
+
+<p>
+  <strong>File Datastream:</strong>
+  <%= link_to @video.mediaContent.content.args[:url], @video.mediaContent.content.args[:url] %>
+  <br>
+  <%= video_tag(@video.mediaContent.content.args[:url], controls: true, autobuffer: true) %>
+</p>
+
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back', videos_path %>

@@ -1,4 +1,6 @@
 Walong::Application.routes.draw do
+  resources :videos
+
   resources :books
 
   root :to => "catalog#index"
