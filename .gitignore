@@ -18,3 +18,5 @@
 
 # Ignore jetty directory (from hydra-jetty)
 /jetty
+.ruby-gemset
+.ruby-version
