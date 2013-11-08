@@ -4,8 +4,6 @@ Feature: Video Entry Creation
   As an archivist
   I want to add a video to the repository
 
-  @wip
-
   Scenario: Enter a non-existent video
     Given a video
     When I enter the videoTitle as "Arsenic and Old Lace"
