@@ -52,8 +52,7 @@ gem "devise-guests", "~> 0.3"
 gem "bootstrap-sass"
 group :development, :test do
   gem "rspec-rails"
+  gem "cucumber-rails", require: false
+  gem "database_cleaner"
   gem "jettywrapper"
-end
-
-group :development, :test do
 end
