@@ -4,8 +4,6 @@ Feature: Book Entry Creation
   As an archivist
   I want to add a book to the repository
 
-  @wip
-
   Scenario: Enter a non-existent book
     Given a book
     When I enter the title as "A Tree Grows in Brooklyn"
