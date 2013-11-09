@@ -1,4 +1,6 @@
-class BookMetadata < ActiveFedora::OmDatastream
+require 'dublinCore_metadata'
+
+class BookMetadata < DublinCoreDatastream
   set_terminology do |t|
     t.root(path: "fields")
     t.title(index_as: :stored_searchable)

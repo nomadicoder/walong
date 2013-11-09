@@ -1,4 +1,6 @@
-class VideoMetadata < ActiveFedora::OmDatastream
+require 'dublinCore_metadata'
+
+class VideoMetadata < DublinCoreDatastream
   set_terminology do |t|
     t.root(path: "fields")
     t.title(index_as: :stored_searchable)
