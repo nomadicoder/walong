@@ -20,4 +20,5 @@ describe "books/show" do
     rendered.should match(/Date Copyrighted/)
     rendered.should match(/MyText/)
   end
+  pending "add media content"
 end

@@ -17,9 +17,11 @@
 
 <p>
   <strong>File Datastream:</strong>
-  <%= link_to @video.mediaContent.content.args[:url], @video.mediaContent.content.args[:url] %>
-  <br>
-  <%= video_tag(@video.mediaContent.content.args[:url], controls: true, autobuffer: true) %>
+  <% if not @video.mediaContent.content.nil? %>
+    <%= link_to @video.mediaContent.content.args[:url], @video.mediaContent.content.args[:url] %>
+    <br>
+    <%= video_tag(@video.mediaContent.content.args[:url], controls: true, autobuffer: true) %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_video_path(@video) %> |

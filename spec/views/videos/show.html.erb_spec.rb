@@ -16,4 +16,5 @@ describe "videos/show" do
     rendered.should match(/Creator/)
     rendered.should match(/MyText/)
   end
+  pending "add media content"
 end

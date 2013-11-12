@@ -6,6 +6,7 @@
 </p>
 
 <p>
+  <strong>Creator:</strong>
   <ul>
     <%- @book.creator.each do |author|%>
       <li><%= author %></li>
@@ -30,7 +31,9 @@
 
 <p>
   <strong>File Datastream:</strong>
-  <%= link_to @book.mediaContent.content.args[:url], @book.mediaContent.content.args[:url] %>
+  <% if not @book.mediaContent.content.nil? %>
+    <%= link_to @book.mediaContent.content.args[:url], @book.mediaContent.content.args[:url] %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
