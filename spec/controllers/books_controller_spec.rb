@@ -77,7 +77,7 @@ describe BooksController do
 
       it "redirects to the created book" do
         post :create, {:book => valid_attributes}, valid_session
-        response.should redirect_to(Book.last)
+        response.should redirect_to(Book.all.last)
       end
     end
 

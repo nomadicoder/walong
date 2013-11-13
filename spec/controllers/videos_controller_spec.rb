@@ -77,7 +77,7 @@ describe VideosController do
 
       it "redirects to the created video" do
         post :create, {:video => valid_attributes}, valid_session
-        response.should redirect_to(Video.last)
+        response.should redirect_to(Video.all.last)
       end
     end
 
