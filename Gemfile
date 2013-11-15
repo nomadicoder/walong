@@ -50,6 +50,7 @@ gem 'hydra', '~> 6.0.0', :require => 'hydra6'
 gem "devise", "3.0.0.rc"
 gem "devise-guests", "~> 0.3"
 gem "bootstrap-sass"
+gem 'diff-lcs', '~> 1.2.4'
 group :development, :test do
   gem "rspec-rails"
   gem "cucumber-rails", require: false
