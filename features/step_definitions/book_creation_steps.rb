@@ -22,6 +22,10 @@ When(/^I enter the description to be "(.*?)"$/) do |description|
   @book.abstract = description
 end
 
+When(/^I upload the mediaContent "(.*?)"$/) do |mediaFile|
+  @book.mediaContent.content = File.open(mediaFile)
+end
+
 Then(/^I the title should be "(.*?)"$/) do |title|
   @book.title.should eq(title)
 end
@@ -40,4 +44,8 @@ end
 
 Then(/^the description should be "(.*?)"$/) do |description|
   @book.abstract.should eq(description)
+end
+
+Then(/^the mediaContent should be "(.*?)"$/) do |mediaFile|
+  Digest::MD5.digest(File.read(mediaFile)).should eq(Digest::MD5.digest(File.read(@book.mediaContent.content)))
 end
